@@ -2,6 +2,9 @@
 Api Rest whit SpringBoot and Postgresql
 
 Query Postgresql:
+
+
+
 -- Crear la base de datos "db_ApiRest" en PostgreSQL
 CREATE DATABASE db_ApiRest;
 
