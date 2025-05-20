@@ -1,28 +1,35 @@
-# Api-Rest
-Api Rest whit SpringBoot and Postgresql
+# ☕ API REST con Java y Spring Boot
 
-Query Postgresql:
+Este proyecto es una API REST básica construida con **Java**, utilizando **Spring Boot** y conectada a una base de datos **PostgreSQL**. Implementa operaciones CRUD completas y está organizada por capas siguiendo buenas prácticas de desarrollo backend.
 
+## ⚙️ Tecnologías utilizadas
 
+- Java 
+- Spring Boot
+- Spring Data JPA
+- PostgreSQL
+- Maven
+- Lombok
+- JUnit (para pruebas)
 
--- Crear la base de datos "db_ApiRest" en PostgreSQL
-CREATE DATABASE db_ApiRest;
+## 📦 Estructura del proyecto
 
+- `controller/` – Maneja las solicitudes HTTP (endpoints).
+- `service/` – Lógica del negocio.
+- `model/` – Modelos o DTOs si aplica.
+- `entity/` – Representa las entidades de la base de datos.
+- `repository/` – Interfaces JPA para acceso a datos.
+- `resources/` – Archivos de configuración (`application.properties`).
+- `test/` – Pruebas unitarias y de integración.
 
--- Crea la tabla "clientes"
-CREATE TABLE clientes (
-  id_cliente SERIAL PRIMARY KEY,
-  nombre VARCHAR(45) NOT NULL,
-  apellido VARCHAR(45) NOT NULL,
-  correo VARCHAR(45) NOT NULL,
-  fecha_registro DATE NOT NULL
-);
+## 🔄 Funcionalidad
 
--- Inserta datos en la tabla "clientes"
-INSERT INTO clientes (nombre, apellido, correo, fecha_registro) VALUES
-('Joel', 'Jurado', 'juradoec@yahoo.com', '2023-08-01'),
-('Carlos', 'Miranda', 'mirandaTr98@gmail.com', '2023-08-02'),
-('Marcela', 'Sanchez', 'schMarce@itb.com', '2023-08-03'),
-('Ben', 'Tennyson', 'ben10@cn.com', '2023-08-04');
+Este proyecto implementa un **CRUD completo** (Crear, Leer, Actualizar, Eliminar) para una entidad definida, con conexión persistente a PostgreSQL.
 
+## 🚀 Cómo ejecutar
+
+1. Clona el repositorio.
+2. Configura la conexión a la base de datos en `application.properties`.
+3. Ejecuta la clase `ApiRestApplication.java` como aplicación Spring Boot.
+4. Accede a los endpoints vía Postman, navegador o cualquier cliente HTTP.
 
